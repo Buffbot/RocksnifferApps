@@ -23,6 +23,11 @@ class App extends Component {
 
   componentDidMount() {
     setInterval(this.refresh.bind(this), 1000);
+    setInterval(function() {
+      this.setState({
+        isVisible: !this.state.isVisible,
+      })
+    }.bind(this), 500);
   }
 
   refresh() {
