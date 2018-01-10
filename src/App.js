@@ -84,6 +84,7 @@ class App extends Component {
   }
 
   setVisibility(isVisible) {
+    console.log('Set visibility to', isVisible);
     this.setState({
       isVisible,
     });
