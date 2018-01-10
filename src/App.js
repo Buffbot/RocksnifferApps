@@ -46,10 +46,19 @@ class App extends Component {
         albumYear,
       } = data.songDetails;
 
-      const memoryReadout = data.memoryReadout;
+      const {
+        TotalNotes,
+        songTimer,
+        currentHitStreak,
+        currentMissStreak,
+        highestHitStreak,
+        songId,
+        totalNotesHit,
+        totalNotesMissed,
+      } = data.memoryReadout;
 
       const hasData = songLength && albumYear && numArrangements;
-      const isInSong = memoryReadout.songTimer > 1;
+      const isInSong = songTimer > 1;
 
       if (!hasData || !isInSong) {
         this.setVisibility(false);
@@ -60,6 +69,11 @@ class App extends Component {
           albumName,
           albumYear,
           imageData: data.albumCoverBase64,
+          totalNotes: TotalNotes,
+          currentHitStreak,
+          currentMissStreak,
+          totalNotesHit,
+          totalNotesMissed,
         });
 
         this.setVisibility(true);
