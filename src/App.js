@@ -30,7 +30,6 @@ class App extends Component {
   }
 
   onRefresh(data) {
-    console.log("DATA", data);
     if (data.success) {
       const {
         songLength,
@@ -92,9 +91,9 @@ class App extends Component {
           <Route path="/notification" render={(props) => ( <Notification {...this.state} /> )} />
           <Route path="/accuracy" render={(props) => ( <AccuracyPercentage {...this.state} /> )} />
           <Route path="/album_art" render={(props) => ( <AlbumArt {...this.state} /> )} />
-          <Route path="/album_title" render={(props) => ( <AlbumTitle {...this.state} /> )} />
-          <Route path="/song_title" render={(props) => ( <SongTitle {...this.state} /> )} />
-          <Route path="/band_name" render={(props) => ( <BandName {...this.state} /> )} />
+          <Route path="/album_title" render={(props) => ( <AlbumTitle title={this.state.albumName} /> )} />
+          <Route path="/song_title" render={(props) => ( <SongTitle title={this.state.songTitle} /> )} />
+          <Route path="/band_name" render={(props) => ( <BandName name={this.state.artistName} /> )} />
         </div>
       </Router>
     );
