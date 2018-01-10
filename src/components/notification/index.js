@@ -24,9 +24,9 @@ class Notification extends Component {
         </div>
         <div className="notification-body">
           <div className="notification-song-data">
-            <SongTitle title={this.props.songTitle} />
-            <BandName name={this.props.bandName} />
-            <AlbumTitle title={this.props.albumTitle} />
+            <SongTitle title={this.props.songName} />
+            <BandName name={this.props.artistName} />
+            <AlbumTitle title={this.props.albumName} />
           </div>
           <AlbumArt
             imageUrl={this.props.imageUrl}
