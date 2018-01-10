@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './style.css';
+
 class AlbumArt extends Component {
   static defaultProps = {
     size: 200,
@@ -14,8 +16,8 @@ class AlbumArt extends Component {
   get image() {
     const { imageData } = this.props;
 
-    if (!imageData || !this.props.isVisible) {
-      return require('../../assets/record.png');
+    if (!imageData) {
+      return null;
     }
 
     return `data:image/jpeg;base64, ${imageData}`;
@@ -24,7 +26,8 @@ class AlbumArt extends Component {
   render() {
     return (
       <div className="album-art">
-        <img src={this.image} height={this.props.size} width={this.props.size} />
+        <img src={this.image} />
+        <img src={require('../../assets/record.png')} />
       </div>
     );
   }

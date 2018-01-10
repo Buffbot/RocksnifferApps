@@ -1,0 +1,20 @@
+.album-art {
+  height: 200px;
+  position: relative;
+  width: 200px;
+}
+
+.album-art:not(.isVisible) img:first-child {
+  opacity: 0;
+}
+
+.album-art.isVisible img:first-child {
+  opacity: 1;
+}
+
+.album-art img {
+  height: 100%;
+  position: absolute;
+  transition: .2s;
+  width: 100%;
+}
