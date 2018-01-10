@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import request from 'ajax-request';
+import $ from "jquery";
 import { HashRouter as Router, Route } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
@@ -30,10 +30,7 @@ class App extends Component {
   }
 
   refresh() {
-    request({
-      url: "http://localhost:9938",
-      json: true,
-    }, this.onRefresh.bind(this));
+    $.getJSON("http://localhost:9938", this.onRefresh.bind(this));
   }
 
   onRefresh(data) {
