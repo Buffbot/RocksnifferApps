@@ -1,0 +1,56 @@
+.notification {
+  color: white;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-weight: bold;
+  -webkit-text-stroke: 0.2vw black;
+}
+
+.notification-header {
+  background: rgb(40, 56, 72);
+  border-bottom: 0.5vw solid black;
+  border-radius: 8px 8px 0 0;
+  font-size: 3.5vw;
+  height: 5vw;
+  display: flex;
+  padding: 1vw 2vw 0 1vw;
+  position: relative;
+}
+
+.notification-header-label {
+  flex: 1 0 auto;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.notification-header .accuracy-percentage {
+  flex: 0 0 auto;
+}
+
+.pick-icon {
+  height: 70%;
+  margin: 2px 5px;
+}
+
+.notification-body {
+  background: rgba(85, 98, 111, 0.84);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  font-size: 4.5vw;
+  line-height: 6vw;
+  padding: 2vw;
+  position: relative;
+}
+
+.notification .album-art {
+  flex: 0 0 auto;
+}
+
+.notification .album-art img {
+  border: 3px solid black;
+  height: 17vw;
+  width: 17vw;
+}
+
+.notification-song-data {
+  flex: 1 0 auto;
+}
