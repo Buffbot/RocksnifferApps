@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route } from 'react-router'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import Notification from './components/notification';
@@ -8,10 +8,9 @@ import AlbumArt from './components/album_art';
 import AlbumTitle from './components/album_title';
 import BandName from './components/band_name';
 import SongTitle from './components/song_title';
+import Main from './components/main';
 
 import './App.css';
-
-const customHistory = createBrowserHistory()
 
 class App extends Component {
   constructor(props) {
@@ -22,9 +21,10 @@ class App extends Component {
 
   render() {
     return (
-      <Router history={customHistory}>
+      <Router>
         <div>
-          <Route exact path="/notification" component={Notification}/>
+          <Route path="/notification" component={Notification}/>
+          <Route path="/root" component={Main}/>
           <Route path="/accuracy" component={AccuracyPercentage}/>
           <Route path="/album_art" component={AlbumArt}/>
           <Route path="/album_title" component={AlbumTitle}/>
