@@ -23,11 +23,6 @@ class App extends Component {
 
   componentDidMount() {
     setInterval(this.refresh.bind(this), 1000);
-    setInterval(function() {
-      this.setState({
-        isVisible: !this.state.isVisible,
-      })
-    }.bind(this), 500);
   }
 
   refresh() {
@@ -85,7 +80,6 @@ class App extends Component {
   }
 
   setVisibility(isVisible) {
-    console.log('Set visibility to', isVisible);
     this.setState({
       isVisible,
     });
