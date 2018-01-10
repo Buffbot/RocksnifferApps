@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class SongTitle extends Component {
   static defaultProps = {
-    name: 'Song Title'
+    title: 'Song Title'
   };
 
   static propTypes = {

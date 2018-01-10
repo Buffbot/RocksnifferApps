@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Notification extends Component {
+class AlbumTitle extends Component {
+  static defaultProps = {
+    title: 'Album Title'
+  };
+
+  static propTypes = {
+    title: PropTypes.string,
+  };
+
   render() {
     return (
       <div className="album-title">
@@ -11,4 +19,4 @@ class Notification extends Component {
   }
 }
 
-export default Notification;
+export default AlbumTitle;
