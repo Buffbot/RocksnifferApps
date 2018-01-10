@@ -59,7 +59,7 @@ class App extends Component {
           songName,
           albumName,
           albumYear,
-          albumCoverBase64: data.albumCoverBase64,
+          imageData: data.albumCoverBase64,
         });
 
         this.setVisibility(true);

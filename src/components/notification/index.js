@@ -29,7 +29,7 @@ class Notification extends Component {
             <AlbumTitle title={this.props.albumName} />
           </div>
           <AlbumArt
-            imageUrl={this.props.imageUrl}
+            imageData={this.props.imageData}
             size={100} />
         </div>
       </div>
