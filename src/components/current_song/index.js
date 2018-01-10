@@ -10,6 +10,10 @@ import SongTitle from '../song_title';
 import './style.css';
 
 class CurrentSong extends Component {
+  static defaultProps = {
+    isVisible: true,
+  }
+
   render() {
     return (
       <div className={classnames("current-song", { isVisible: this.props.isVisible })} >

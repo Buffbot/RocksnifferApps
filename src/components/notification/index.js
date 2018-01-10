@@ -35,7 +35,8 @@ class Notification extends Component {
           </div>
           <AlbumArt
             imageData={this.props.imageData}
-            size={100} />
+            size={100}
+            isVisible={this.props.isVisible} />
         </div>
       </div>
     );

@@ -4,11 +4,11 @@
   width: 200px;
 }
 
-.album-art:not(.isVisible) img:first-child {
+.album-art:not(.isVisible) img:last-child {
   opacity: 0;
 }
 
-.album-art.isVisible img:first-child {
+.album-art.isVisible img:last-child {
   opacity: 1;
 }
 
