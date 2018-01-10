@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import './styles.css';
 
@@ -12,7 +13,7 @@ import SongTitle from '../song_title';
 class Notification extends Component {
   render() {
     return (
-      <div className="notification">
+      <div className={classnames("notification", { isVisible: this.props.isVisible })}>
         <div className="notification-header">
           <img
             src={require('../../assets/rs_pick.png')}

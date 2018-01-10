@@ -2,7 +2,13 @@
   color: white;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: bold;
+  opacity: 0;
+  transition: .5s;
   -webkit-text-stroke: 0.2vw black;
+}
+
+.notification.isVisible {
+  opacity: 1;
 }
 
 .notification-header {

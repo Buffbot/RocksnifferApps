@@ -14,7 +14,13 @@ class AccuracyPercentage extends Component {
   get percentage() {
     const { totalNotes, totalNotesHit } = this.props;
 
-    return (totalNotesHit / totalNotes) * 100;
+    const percent = ((totalNotesHit / totalNotes) * 100);
+
+    if (isNaN(percent)) {
+      return "0.00";
+    }
+
+    return percent.toFixed(2);
   }
 
   render() {
