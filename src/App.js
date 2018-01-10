@@ -18,7 +18,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isVisible: true,
+      isVisible: false,
     };
   }
 
@@ -82,6 +82,7 @@ class App extends Component {
   setVisibility(isVisible) {
     this.setState({
       isVisible,
+      imageData: null,
     });
   }
 
