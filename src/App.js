@@ -9,7 +9,6 @@ import AlbumArt from './components/album_art';
 import AlbumTitle from './components/album_title';
 import BandName from './components/band_name';
 import SongTitle from './components/song_title';
-import Main from './components/main';
 
 import './App.css';
 
