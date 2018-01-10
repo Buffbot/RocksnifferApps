@@ -30,7 +30,10 @@ class App extends Component {
   }
 
   refresh() {
-    request("http://localhost:9938", this.onRefresh.bind(this));
+    request({
+      url: "http://localhost:9938",
+      json: true,
+    }, this.onRefresh.bind(this));
   }
 
   onRefresh(data) {
