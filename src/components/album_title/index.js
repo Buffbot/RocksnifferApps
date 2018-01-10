@@ -17,8 +17,7 @@ class AlbumTitle extends Component {
   render() {
     return (
       <div className="album-title">
-        { this.props.title }
-        ({ this.props.year })
+        { this.props.title } ({ this.props.year })
       </div>
     );
   }

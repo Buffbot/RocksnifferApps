@@ -1,0 +1,25 @@
+.current-song {
+  display: flex;
+}
+
+.current-song .album-art {
+  flex: 0 0 auto;
+}
+
+.current-song-info {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  font-size: 36px;
+  opacity: 0;
+  padding-left: 20px;
+  transition: .5s;
+}
+
+.current-song-info.isVisible {
+  opacity: 1;
+}
+
+.current-song-info .song-name {
+  flex: 1 1 auto;
+}

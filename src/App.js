@@ -9,6 +9,7 @@ import AlbumArt from './components/album_art';
 import AlbumTitle from './components/album_title';
 import BandName from './components/band_name';
 import SongTitle from './components/song_title';
+import CurrentSong from './components/current_song';
 
 import './App.css';
 
@@ -91,9 +92,10 @@ class App extends Component {
           <Route path="/notification" render={(props) => ( <Notification {...this.state} /> )} />
           <Route path="/accuracy" render={(props) => ( <AccuracyPercentage {...this.state} /> )} />
           <Route path="/album_art" render={(props) => ( <AlbumArt {...this.state} /> )} />
-          <Route path="/album_title" render={(props) => ( <AlbumTitle title={this.state.albumName} /> )} />
+          <Route path="/album_title" render={(props) => ( <AlbumTitle title={this.state.albumName} year={this.state.albumYear} /> )} />
           <Route path="/song_title" render={(props) => ( <SongTitle title={this.state.songName} /> )} />
           <Route path="/band_name" render={(props) => ( <BandName name={this.state.artistName} /> )} />
+          <Route path="/current_song" render={(props) => ( <CurrentSong {...this.state} /> )} />
         </div>
       </Router>
     );
