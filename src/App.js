@@ -92,7 +92,7 @@ class App extends Component {
           <Route path="/accuracy" render={(props) => ( <AccuracyPercentage {...this.state} /> )} />
           <Route path="/album_art" render={(props) => ( <AlbumArt {...this.state} /> )} />
           <Route path="/album_title" render={(props) => ( <AlbumTitle title={this.state.albumName} /> )} />
-          <Route path="/song_title" render={(props) => ( <SongTitle title={this.state.songTitle} /> )} />
+          <Route path="/song_title" render={(props) => ( <SongTitle title={this.state.songName} /> )} />
           <Route path="/band_name" render={(props) => ( <BandName name={this.state.artistName} /> )} />
         </div>
       </Router>
