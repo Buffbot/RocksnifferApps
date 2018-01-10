@@ -54,7 +54,7 @@ class App extends Component {
       if (!hasData || !isInSong) {
         this.setVisibility(false);
       } else {
-        this.setData({
+        this.setState({
           artistName,
           songName,
           albumName,
