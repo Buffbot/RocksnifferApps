@@ -20,7 +20,9 @@ class Notification extends Component {
           <div className="notification-header-label">
             Current Song
           </div>
-          <AccuracyPercentage percent={this.props.percent} />
+          <AccuracyPercentage
+            totalNotes={this.props.totalNotes}
+            totalNotesHit={this.props.totalNotesHit} />
         </div>
         <div className="notification-body">
           <div className="notification-song-data">
