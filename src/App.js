@@ -17,11 +17,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isVisible: false,
-      artistName: "The Ghost of Andrew WK",
-      albumYear: 2089,
-      songName: "Party like its 2089",
-      albumName: "Party like its 2089 - the Album",
+      isVisible: true,
     };
   }
 
