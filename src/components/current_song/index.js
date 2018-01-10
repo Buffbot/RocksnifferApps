@@ -13,7 +13,9 @@ class CurrentSong extends Component {
   render() {
     return (
       <div className={classnames("current-song", { isVisible: this.props.isVisible })} >
-        <AlbumArt imageData={this.props.imageData} />
+      <AlbumArt
+        imageData={this.props.imageData}
+        isVisible={this.props.isVisible} />
         <div className={classnames("current-song-info", { isVisible: this.props.isVisible })}>
           <SongTitle title={this.props.songName} />
           <BandName name={this.props.artistName} />

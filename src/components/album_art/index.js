@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 class AlbumArt extends Component {
   static defaultProps = {
     size: 200,
+    isVisible: true,
   };
 
   static propTypes = {
@@ -13,7 +14,7 @@ class AlbumArt extends Component {
   get image() {
     const { imageData } = this.props;
 
-    if (!imageData) {
+    if (!imageData || !this.props.isVisible) {
       return require('../../assets/record.png');
     }
 

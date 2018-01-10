@@ -82,7 +82,6 @@ class App extends Component {
   setVisibility(isVisible) {
     this.setState({
       isVisible,
-      imageData: null,
     });
   }
 
